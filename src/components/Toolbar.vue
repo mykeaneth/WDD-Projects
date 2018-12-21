@@ -1,10 +1,7 @@
-<template>
-  <header class>
+<template functional>
+  <header v-if="loggedIn">
     <h1>Web Design Davao Projects</h1>
-    <div v-if="loggedIn">
-        <img :src="profile.picture">
-        <button @click="logout">Logout</button>
-    </div>
-    <button v-else @click="login">Login</button>
+      <img :src="props.profile.picture">
+      <button @click="props.logout">Logout</button>
   </header>
 </template>
